@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
             <event-thumbnail #thumbnail
             [event]="event1"></event-thumbnail>
 
+            <h3>{{thumbnail.someValue}}</h3>
             <button class="btn btn0primary" 
             (click)="thumbnail.logFoo()">Sample Button</button>
         </div>
