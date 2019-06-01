@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
             <h1>Upcoming Angular Events</h1>
             <hr/>
             <event-thumbnail 
-            (eventClick)="handleEventClicked($event)"
             [event]="event1"></event-thumbnail>
         </div>
     `
