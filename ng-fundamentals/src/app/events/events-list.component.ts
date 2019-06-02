@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from './shared/event.service';
 import { toBase64String } from '@angular/compiler/src/output/source_map';
-
-declare let toastr
+import { ToastrService } from '../common/toastr.service';
 
 @Component({
     selector: 'events-list',
@@ -22,7 +21,7 @@ export class EventsListComponent implements OnInit{
 
     events:any[]
 
-    constructor (private eventService: EventService){
+    constructor (private eventService: EventService,private toastrService: ToastrService){
         
     }
 
@@ -31,7 +30,7 @@ export class EventsListComponent implements OnInit{
     }
     
     handleThumbnailClick(evenetName){
-        toastr.success(evenetName)
+        this.toastrService.success(evenetName)
     }
 
 }
